@@ -190,7 +190,7 @@ int GSocket::Run()
 		sClient = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 		memset(&server, 0, sizeof(SOCKADDR_IN));
 		server.sin_family = AF_INET;
-		server.sin_addr.S_un.S_addr = inet_addr("15.113.222.195");
+		server.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
 		server.sin_port = htons(37777);
 		int  conbret =  connect(sClient, (struct sockaddr *)&server, sizeof(SOCKADDR_IN));
 		if(conbret == -1)
